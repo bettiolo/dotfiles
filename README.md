@@ -20,6 +20,7 @@ brew install \
  lazygit `# command line git ui` \ 
  fd `# simple find` \ 
  gping `# ping with a graph` \ 
+ figlet `# generates big console text` \ 
 
 # Install apps
 brew install \
@@ -61,6 +62,7 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 ```
 
 # Configure iTerm2
+- Blinking Cursor: Settings -> Profiles -> Text -> Blinking cursor
 - Colors: Settings -> Profiles -> Colors -> Color Preset -> Tango Dark
 - Keyboard (Micro editor): Settings -> Profiles -> Keys -> General -> Left Option Key -> Esc+
 - Keyboard (Word jump delete with Option key): Settings → Profiles → Keys → Key mappings → Presets... → Natural Text Editing
