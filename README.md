@@ -17,6 +17,9 @@ brew install \
  dog `# better ux than dig` \ 
  dust `# replacement for du` \ 
  duf `# replacement for df` \ 
+ lazygit `# command line git ui` \ 
+ fd `# simple find` \ 
+ gping `# ping with a graph` \ 
 
 # Install apps
 brew install \
@@ -48,8 +51,13 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.o
 ```
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src # before `source "$ZSH/oh-my-zsh.sh"`
 ZSH_THEME="powerlevel10k/powerlevel10k"
+COMPLETION_WAITING_DOTS="true"
 plugins=(<existing...> zsh-autosuggestions zsh-syntax-highlighting)
 eval "$(fnm env --use-on-cd)"
+
+export EDITOR='micro' # set micro as default text editor
+alias ll="exa -la --git --icons --colour-scale"
+alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissions
 ```
 
 # Configure iTerm2
@@ -91,7 +99,6 @@ eval "$(fnm env --use-on-cd)"
 - `ctop` like `top` for containers
 
 # Configure `micro`
-TODO: Set as default editor
 TODO: Enable editorconfig or `"tabstospaces": true` ?
 
 # Confgiure VS Code
@@ -109,14 +116,19 @@ Edit `settings.json` and set the Meslo font from Powerline10k
 - ? ESLint
 - ? EditorConfig
 
+# Adjust MacOS settings
+```bash
+defaults write com.apple.Finder AppleShowAllFiles true
+```
+
 # TODO
 - ? `direnv` to have per folder `.envrc`
 - ? `zoxide` a smarter `cd`
+- ? `z` cli tool for frequently used folders
+- ? `autojump` db of used folder
 - ? `fzf` a command line fuzzy finder
-- ? `fd` simple `find`
 - ? `broot` command line `tree` navigator
-- ? `diff-so-fancy` better readabilty for diffs
-- ? `lazygit` command line git diff ui
+- ? `diff-so-fancy` better readabilty for diff
 - ? `bat` replacement for cat with color syntax
 - ? `lazydocker` docker info dashboard
 - ? `chezmoi` manage your dotfiles across multiple diverse machines
@@ -125,11 +137,22 @@ Edit `settings.json` and set the Meslo font from Powerline10k
 - ? `shellcheck` linter for shell scripts
 - ? `tig` commandline ui for git
 - ? `youtube-dl`
-- ? `z` cli tool for frequently used folders
 - ? `fig` augments cli
+- ? `jq,jo` json cli
+- ? `gifsicle` gif command line editor
+- ? `mas` command line interface for the Mac App Store
+- ? `hub` extension to command-line git for github
+- ? `clog` changelog for the rest of us
+- Look into `brewfile`
 
-# Examples
+
+# Examples / Inspiration
 - https://github.com/betarelease/dotfiles
 - https://pwal.ch/posts/2021-12-27-dev-env-dotfiles/
 - https://github.com/pwalch/dotfiles
 - https://www.youtube.com/watch?v=AuoYzuQ1yes
+- https://gitlab.com/dnsmichi/dotfiles/-/tree/main/
+- https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+    - https://git.herrbischoff.com/awesome-macos-command-line/about/
+- https://git.herrbischoff.com/awesome-command-line-apps/about/
+- TODO: https://github.com/mathiasbynens/dotfiles/tree/main
