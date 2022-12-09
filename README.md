@@ -103,20 +103,24 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 # Configure `micro`
 TODO: Enable editorconfig or `"tabstospaces": true` ?
 
-# Confgiure VS Code
-Edit `settings.json` and set the Meslo font from Powerline10k
-
-```bash
-"editor.fontFamily": "MesloLGS NF",
 ```
 
 # Install VS Code extensions:
 - Error Lens
 - Gitlens
 - Todo Highlight
-- ? VSCode icons
-- ? ESLint
-- ? EditorConfig
+- Prettier
+- VSCode icons
+- ESLint
+- EditorConfig
+
+# Confgiure VS Code
+Edit `settings.json`
+
+```bash
+"editor.fontFamily": "MesloLGS NF",
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.formatOnSave": true,
 
 # Adjust MacOS settings
 ```bash
