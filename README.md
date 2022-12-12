@@ -1,6 +1,11 @@
 # dotfiles
 
+## Initial setup
+
+- Update OS
+
 ## Steps
+
 ```bash
 # Install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -8,19 +13,19 @@
 # Install cli tools
 brew install \
  git \
- micro `# command line text editor`  \ 
- fnm `# fast node version manager` \ 
- htop `# fancy top` \ 
- glances `# fancy system monitor` \ 
- exa `# replacement for ls` \ 
- httpie `# better ux than curl` \ 
- dog `# better ux than dig` \ 
- dust `# replacement for du` \ 
- duf `# replacement for df` \ 
- lazygit `# command line git ui` \ 
- fd `# simple find` \ 
- gping `# ping with a graph` \ 
- figlet `# generates big console text` \ 
+ micro `# command line text editor`  \
+ fnm `# fast node version manager` \
+ htop `# fancy top` \
+ glances `# fancy system monitor` \
+ exa `# replacement for ls` \
+ httpie `# better ux than curl` \
+ dog `# better ux than dig` \
+ dust `# replacement for du` \
+ duf `# replacement for df` \
+ lazygit `# command line git ui` \
+ fd `# simple find` \
+ gping `# ping with a graph` \
+ figlet `# generates big console text` \
 
 # Install apps
 brew install \
@@ -49,6 +54,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.o
 ```
 
 # Configure `.zshrc`
+
 ```
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src # before `source "$ZSH/oh-my-zsh.sh"`
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -62,12 +68,14 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 ```
 
 # Configure iTerm2
+
 - Blinking Cursor: Settings -> Profiles -> Text -> Blinking cursor
 - Colors: Settings -> Profiles -> Colors -> Color Preset -> Tango Dark
 - Keyboard (Micro editor): Settings -> Profiles -> Keys -> General -> Left Option Key -> Esc+
 - Keyboard (Word jump delete with Option key): Settings → Profiles → Keys → Key mappings → Presets... → Natural Text Editing
 
 # App Store
+
 - Maccy
 - Hand Mirror
 - OTP Auth
@@ -86,24 +94,27 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 - HushNagBlocker
 - Super Agent
 
-
 # Pick one
+
 - iStatsMenu (App Store)
 - MenuBar Stats (App Store)
 - `stats`
 
 # DB Tools
+
 - `tableplus`
 - `sequel-pro`
 - `studio-3t`
 
 # Docker tools
+
 - `ctop` like `top` for containers
 
 # Configure `micro`
+
 TODO: Enable editorconfig or `"tabstospaces": true` ?
 
-```
+````
 
 # Install VS Code extensions:
 - Error Lens
@@ -125,9 +136,10 @@ Edit `settings.json`
 # Adjust MacOS settings
 ```bash
 defaults write com.apple.Finder AppleShowAllFiles true
-```
+````
 
 # TODO
+
 - ? `direnv` to have per folder `.envrc`
 - ? `zoxide` a smarter `cd`
 - ? `z` cli tool for frequently used folders
@@ -151,14 +163,14 @@ defaults write com.apple.Finder AppleShowAllFiles true
 - ? `clog` changelog for the rest of us
 - Look into `brewfile`
 
-
 # Examples / Inspiration
+
 - https://github.com/betarelease/dotfiles
 - https://pwal.ch/posts/2021-12-27-dev-env-dotfiles/
 - https://github.com/pwalch/dotfiles
 - https://www.youtube.com/watch?v=AuoYzuQ1yes
 - https://gitlab.com/dnsmichi/dotfiles/-/tree/main/
 - https://github.com/mathiasbynens/dotfiles/blob/master/.macos
-    - https://git.herrbischoff.com/awesome-macos-command-line/about/
+  - https://git.herrbischoff.com/awesome-macos-command-line/about/
 - https://git.herrbischoff.com/awesome-command-line-apps/about/
 - TODO: https://github.com/mathiasbynens/dotfiles/tree/main
