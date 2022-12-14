@@ -5,6 +5,11 @@
 - Update OS
 - Install Xcode
 - Run Xcode and accept T&C
+- Install latest Command Line Tools from https://developer.apple.com/download/all/?q=command%20line%20tools
+- Enable latest Command Line Tools
+  ```bash
+  sudo xcode-select -switch /Library/Developer/CommandLineTools
+  ```
 - Install `brew`
   ```bash
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
