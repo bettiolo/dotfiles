@@ -3,6 +3,24 @@
 ## Initial setup
 
 - Update OS
+- Install Xcode
+- Install `brew`
+  ```bash
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
+- Install and configure `git`
+  ```bash
+  brew install git
+  ssh-keygen -t ed25519 -C "marco@bettiolo.it"
+  eval "$(ssh-agent -s)"
+  ```
+- Edit ~/.ssh/config
+  ```
+  Host *.github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  ```
 
 ## Configure MacOS
 ```
@@ -86,44 +104,6 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Enable subpixel font rendering on non-Apple LCDs
-# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
-# ??? defaults write NSGlobalDomain AppleFontSmoothing -int 1
-
-# Enable HiDPI display modes (requires restart)
-# ??? sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-
-##############################################################################
-# Safari & WebKit                                                             #
-###############################################################################
-
-# Show the full URL in the address bar
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-
-# Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-
-# Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-
-# Add a context menu item for showing the Web Inspector in web views
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-###############################################################################
-# Mail                                                                        #
-###############################################################################
-
-# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-
-# Disable automatic spell checking
-defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
-
-# Display emails in threaded mode, sorted by date (oldest at the top)
-defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
-
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
@@ -166,7 +146,6 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
-
 ###############################################################################
 # Menu Bar                                                                    #
 ###############################################################################
@@ -191,6 +170,10 @@ defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
 
 ```
 
+## Configure Finder
+
+## Configure Safari
+
 ## Steps
 
 Add Accounts: System Settins -> Internet Accounts
@@ -199,12 +182,9 @@ open -b com.apple.systempreferences /System/Library/PreferencePanes/InternetAcco
 ```
 
 ```bash
-# Install brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install cli tools
 brew install \
- git \
  micro `# command line text editor`  \
  fnm `# fast node version manager` \
  htop `# fancy top` \
