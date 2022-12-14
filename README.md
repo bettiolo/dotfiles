@@ -16,6 +16,7 @@
   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
   pbcopy < ~/.ssh/id_ed25519.pub
   ```
+- Add ssh key to GitHub: https://github.com/settings/ssh/new
 - Edit `~/.ssh/config`
   ```
   Host *.github.com
