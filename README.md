@@ -32,8 +32,8 @@
 - Install `git` and clone this repo
   ```bash
   brew install git
-  mdkir ~/Code
-  cd ~Code
+  mkdir ~/Code
+  cd ~/Code
   git clone git@github.com:bettiolo/dotfiles.git
   ```
 
