@@ -6,9 +6,6 @@
 
 ## Configure MacOS
 ```
-# System Preferences > General > Appearance
-defaults write -globalDomain AppleInterfaceStyleSwitchesAutomatically -bool true
-
 # System Preferences > General > Click in the scrollbar to: Jump to the spot that's clicked
 defaults write -globalDomain AppleScrollerPagingBehavior -bool true
 
@@ -27,10 +24,15 @@ defaults write com.apple.dock magnification -bool false
 # System Preferences > Dock > Minimize windows into application icon
 defaults write com.apple.dock minimize-to-application -bool true
 
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
 # System Preferences > Mission Controll > Automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+###############################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+###############################################################################
 
 # System Preferences > Keyboard >
 defaults write NSGlobalDomain KeyRepeat -int 2
@@ -38,20 +40,8 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # System Preferences > Keyboard >
 defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
-# System Preferences > Trackpad > Tap to click
 # Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-# Trackpad: map bottom right corner to right-click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
-
-# Increase sound quality for Bluetooth headphones/headsets
-### NEEDS TESTING? defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -79,52 +69,16 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-# Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-# Enable spring loading for directories
-defaults write NSGlobalDomain com.apple.springing.enabled -bool true
-
-# Remove the spring loading delay for directories
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
-
-# Avoid creating .DS_Store files on network or USB volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-
-# Enable AirDrop over Ethernet and on unsupported Macs running Lion
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-
-# Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
-
-# Show the /Volumes folder
-sudo chflags nohidden /Volumes
-
-# Expand the following File Info panes:
-# “General”, “Open with”, and “Sharing & Permissions”
-defaults write com.apple.finder FXInfoPanesExpanded -dict \
-	General -bool true \
-	OpenWith -bool true \
-	Privileges -bool true
- 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1 
-
-# Don’t group windows by application in Mission Control
-# (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-by-app -bool false
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # Set language and text formats
-defaults write NSGlobalDomain AppleLanguages -array "en" "it"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=GBP"
+defaults write NSGlobalDomain AppleLanguages -array "en-GB" "it" "sl"
+defaults write NSGlobalDomain AppleLocale -string "en_GB"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
-
-# Show language menu in the top right corner of the boot screen
-sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -143,11 +97,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Safari & WebKit                                                             #
 ###############################################################################
 
-# Privacy: don’t send search queries to Apple
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-
-# Show the full URL in the address bar (note: this still hides the scheme)
+# Show the full URL in the address bar
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
 # Enable Safari’s debug menu
@@ -160,21 +110,6 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-# Enable continuous spellchecking
-defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
-# Disable auto-correct
-defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
-
-# Block pop-up windows
-defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
-
-# Enable “Do Not Track”
-defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
-
-# Update extensions automatically
-defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ###############################################################################
 # Mail                                                                        #
@@ -231,9 +166,37 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
+
+###############################################################################
+# Menu Bar                                                                    #
+###############################################################################
+
+# Hide Bluetooth icon in menu bar
+defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Bluetooth -int 24
+
+# Hide Sound icon in menu bar
+defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Sound -int 8
+
+# Hide WiFi icon in menu bar
+defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist WiFi -int 8
+
+# Hide Display icon in menu bar
+defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Display -int 8
+
+# Hide NowPlaying icon in menu bar
+defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist NowPlaying -int 8
+
+# Hide Spotlight icon from menu bar
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
+
 ```
 
 ## Steps
+
+Add Accounts: System Settins -> Internet Accounts
+```bash
+open -b com.apple.systempreferences /System/Library/PreferencePanes/InternetAccounts.prefPane
+```
 
 ```bash
 # Install brew
