@@ -25,13 +25,20 @@
   ```
 
 ## Configure MacOS
-```
 
-```
+Run [`setup-macos.sh`](./setup-macos.sh)
 
 ## Configure Finder
+- View > Show View Options > Configure settings and click "Use as Defaults"
+- Settings > Sidebar > Enable / Disable shortcuts
 
 ## Configure Safari
+- View > Show Status Bar
+- Settings > General > Safari opens with: All windows from last session
+- Settings > Tabs > Tab layout: Compact
+- Settings > Tabs > X Always show website title in tabs
+- Settings > Advanced > Smart Search Field: X Show full website address
+- Settings > Advanced > X Show Develop menu in menu bar
 
 ## Steps
 
