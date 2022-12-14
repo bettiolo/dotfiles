@@ -31,10 +31,11 @@
   ```
 - Install `git` and clone this repo
   ```bash
-  brew install git
-  mkdir ~/Code
-  cd ~/Code
-  git clone git@github.com:bettiolo/dotfiles.git
+  brew install git && 
+  mkdir -p ~/Code/bettiolo && 
+  cd ~/Code/bettiolo && 
+  git clone git@github.com:bettiolo/dotfiles.git &&
+  cd dotfiles
   ```
 
 ## Configure MacOS
