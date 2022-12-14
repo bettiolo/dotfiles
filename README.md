@@ -14,7 +14,7 @@
   ssh-keygen -t ed25519 -C "marco@bettiolo.it"
   eval "$(ssh-agent -s)"
   ```
-- Edit ~/.ssh/config
+- Edit `~/.ssh/config`
   ```
   Host *.github.com
   AddKeysToAgent yes
