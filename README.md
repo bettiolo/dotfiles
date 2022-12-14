@@ -14,9 +14,8 @@
   ```bash
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
-- Install and configure `git`
+- Configure `ssh`
   ```bash
-  brew install git
   ssh-keygen -t ed25519 -C "marco@bettiolo.it"
   eval "$(ssh-agent -s)"
   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
@@ -29,6 +28,13 @@
     AddKeysToAgent yes
     UseKeychain yes
     IdentityFile ~/.ssh/id_ed25519
+  ```
+- Install `git` and clone this repo
+  ```bash
+  brew install git
+  mdkir ~/Code
+  cd ~Code
+  git clone git@github.com:bettiolo/dotfiles.git
   ```
 
 ## Configure MacOS
