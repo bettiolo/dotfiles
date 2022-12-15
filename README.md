@@ -31,10 +31,11 @@
   ```
 - Install `git` and clone this repo
   ```bash
-  brew install git
-  mkdir ~/Code
-  cd ~/Code
-  git clone git@github.com:bettiolo/dotfiles.git
+  brew install git && 
+  mkdir -p ~/Code/bettiolo && 
+  cd ~/Code/bettiolo && 
+  git clone git@github.com:bettiolo/dotfiles.git &&
+  cd dotfiles
   ```
 
 ## Configure MacOS
@@ -107,10 +108,13 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.o
 # Configure `.zshrc`
 
 ```
+export ZSH="$HOME/.oh-my-zsh"
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src # before `source "$ZSH/oh-my-zsh.sh"`
 ZSH_THEME="powerlevel10k/powerlevel10k"
 COMPLETION_WAITING_DOTS="true"
-plugins=(<existing...> zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
 eval "$(fnm env --use-on-cd)"
 
 export EDITOR='micro' # set micro as default text editor
@@ -190,11 +194,6 @@ Edit `settings.json`
 "editor.fontFamily": "MesloLGS NF",
 "editor.defaultFormatter": "esbenp.prettier-vscode",
 "editor.formatOnSave": true,
-
-# Adjust MacOS settings
-```bash
-defaults write com.apple.Finder AppleShowAllFiles true
-````
 
 # TODO
 
