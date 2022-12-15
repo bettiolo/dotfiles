@@ -120,10 +120,17 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 
 # Configure iTerm2
 
-- Blinking Cursor: Settings -> Profiles -> Text -> Blinking cursor
+- Blinking Cursor: Settings -> Profiles -> Text -> X Blinking cursor
 - Colors: Settings -> Profiles -> Colors -> Color Preset -> Tango Dark
 - Keyboard (Micro editor): Settings -> Profiles -> Keys -> General -> Left Option Key -> Esc+
 - Keyboard (Word jump delete with Option key): Settings → Profiles → Keys → Key mappings → Presets... → Natural Text Editing
+
+# Configure MacOS
+
+- Settings > Apple ID > iCloud > Private Relay > Enable
+- Settings > Apple ID > iCloud > iCloud Drive > Apps Syncing to iCloud Drive > X Desktop & Documents Folders
+- Settings > Displays > Night Shift > Schedule: Sunset to Sunrise
+- Settings > Displays > Night Shift > Color temperature: Few clicks to the left
 
 # App Store
 
@@ -138,7 +145,7 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 - Slack
 
 - Next Meeting
-- Agenda
+- Agenda?
 - Structured?
 
 - Adguard

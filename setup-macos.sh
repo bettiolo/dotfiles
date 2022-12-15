@@ -16,9 +16,6 @@ defaults write com.apple.dock magnification -bool false
 # System Preferences > Dock > Minimize windows into application icon
 defaults write com.apple.dock minimize-to-application -bool true
 
-# Don’t show recent applications in Dock
-defaults write com.apple.dock show-recents -bool false
-
 # System Preferences > Mission Controll > Automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
@@ -60,9 +57,6 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-
-# Speed up Mission Control animations
-defaults write com.apple.dock expose-animation-duration -float 0.1 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
