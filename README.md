@@ -145,6 +145,10 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 - Settings > Trackpad > Force Click: Disable
 - Settings > Trackpad > Look up: Disable
 - Settings > Trackpad > Tap to click: Enable
+- Settings > Trackpad > Click: Light
+- Settings > Trackpad > More Gestures > App Expose: Swipe Down with Three Fingers
+- Settings > Trackpad > More Gestures > Launchpad: Disable
+
 
 # App Store
 
