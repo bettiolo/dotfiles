@@ -29,9 +29,6 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # System Preferences > Keyboard >
 defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
-# Trackpad: enable tap to click for this user and for the login screen
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # Finder: show hidden files by default
