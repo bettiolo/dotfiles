@@ -135,11 +135,16 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 - Settings > Apple ID > iCloud > iCloud Drive > Apps Syncing to iCloud Drive > X Desktop & Documents Folders
 - Settings > Displays > Night Shift > Schedule: Sunset to Sunrise
 - Settings > Displays > Night Shift > Color temperature: Few clicks to the left
+- Settings > Displays > More Space
 - Settings > Battery > Options ... > Wake for netwoerk access: Never
 - Settings > Battery > Low power mode: Only on Battery
 - Settings > Lock Screen > Turn display off on battery: 10 minutes
 - Settings > Lock Screen > Turn display off on power: 1 hour
 - Settings > Lock Screen > Require password after: 5 seconds
+- Settings > Trackpad > Tracking Speed: 1 notch from the right
+- Settings > Trackpad > Force Click: Disable
+- Settings > Trackpad > Look up: Disable
+- Settings > Trackpad > Tap to click: Enable
 
 # App Store
 
