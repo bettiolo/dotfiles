@@ -136,7 +136,6 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 - Settings > Displays > Night Shift > Schedule: Sunset to Sunrise
 - Settings > Displays > Night Shift > Color temperature: Few clicks to the left
 - Settings > Displays > More Space
-- Settings > Battery > Options ... > Wake for netwoerk access: Never
 - Settings > Battery > Low power mode: Only on Battery
 - Settings > Lock Screen > Turn display off on battery: 10 minutes
 - Settings > Lock Screen > Turn display off on power: 1 hour
@@ -148,6 +147,7 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 - Settings > Trackpad > Click: Light
 - Settings > Trackpad > More Gestures > App Expose: Swipe Down with Three Fingers
 - Settings > Trackpad > More Gestures > Launchpad: Disable
+- Settings > Notifications > Disable all "Allow notification when ..."
 
 
 # App Store
