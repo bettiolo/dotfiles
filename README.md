@@ -142,7 +142,9 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 - Settings > Lock Screen > Require password after: 5 seconds
 - Settings > Keyboard > Keyboard navigation: Enabled
 - Settings > Keyboard > Turn Keyboard backlight off after inactivity: After 5 minutes
-- Settings > Keyboard > Keynoard Shortcuts... > Function Keys > Use F1, F2, etc. keys as standard function keys: Enabled
+- Settings > Keyboard > Keyboard Shortcuts... > Function Keys > Use F1, F2, etc. keys as standard function keys: Enabled
+- Settings > Keyboard > Text input > Edit ... > Correct spelling automatically: Disabled
+- Settings > Keyboard > Text input > Edit ... > Capitalise words automatically: Disabled
 - Settings > Trackpad > Tracking Speed: 1 notch from the right
 - Settings > Trackpad > Force Click: Disable
 - Settings > Trackpad > Look up: Disable
