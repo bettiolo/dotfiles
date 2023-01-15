@@ -31,9 +31,9 @@
   ```
 - Install `git` and clone this repo
   ```bash
-  brew install git && 
-  mkdir -p ~/Code/bettiolo && 
-  cd ~/Code/bettiolo && 
+  brew install git &&
+  mkdir -p ~/Code/bettiolo &&
+  cd ~/Code/bettiolo &&
   git clone git@github.com:bettiolo/dotfiles.git &&
   cd dotfiles
   ```
@@ -43,10 +43,12 @@
 Run [`setup-macos.sh`](./setup-macos.sh)
 
 ## Configure Finder
+
 - View > Show View Options > Configure settings and click "Use as Defaults"
 - Settings > Sidebar > Enable / Disable shortcuts
 
 ## Configure Safari
+
 - View > Show Status Bar
 - Settings > General > Safari opens with: All windows from last session
 - Settings > Tabs > Tab layout: Compact
@@ -57,6 +59,7 @@ Run [`setup-macos.sh`](./setup-macos.sh)
 ## Steps
 
 Add Accounts: System Settins -> Internet Accounts
+
 ```bash
 open -b com.apple.systempreferences /System/Library/PreferencePanes/InternetAccounts.prefPane
 ```
@@ -154,7 +157,6 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 - Settings > Trackpad > More Gestures > Launchpad: Disable
 - Settings > Notifications > Disable all "Allow notification when ..."
 
-
 # App Store
 
 - Maccy
@@ -195,9 +197,8 @@ alias l="exa -la --git --icons --colour-scale --no-user --no-time --no-permissio
 
 TODO: Enable editorconfig or `"tabstospaces": true` ?
 
-````
-
 # Install VS Code extensions:
+
 - Error Lens
 - Gitlens
 - Todo Highlight
@@ -207,6 +208,7 @@ TODO: Enable editorconfig or `"tabstospaces": true` ?
 - EditorConfig
 
 # Confgiure VS Code
+
 Edit `settings.json`
 
 ```bash
