@@ -213,6 +213,7 @@ Edit `settings.json`
 "editor.fontFamily": "MesloLGS NF",
 "editor.defaultFormatter": "esbenp.prettier-vscode",
 "editor.formatOnSave": true,
+```
 
 # TODO
 
